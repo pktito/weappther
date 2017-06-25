@@ -1,0 +1,21 @@
+<p>{{cityHistory_.name}}</p>
+
+<canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+</canvas>
+
+<div class="separation"></div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>CITY</th>
+            <th>TEMPERATURA</th>
+            <th>DATE</th>
+        </tr>
+    </thead>
+
+    <tr ng-repeat="data in dataHistory">
+        <td>{{data.city}}</td>
+        <td>{{data.temp.temp}}</td>
+        <td>{{data.date}}</td>
+    </tr>
+</table>
