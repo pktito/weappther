@@ -1,0 +1,16 @@
+/* app css stylesheet */
+
+.mainContainer{
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top: 75px;
+}
+
+.maps {
+  height: 480px;
+  width : 100%;
+}
+
+.separation{
+  height : 75px;
+}
