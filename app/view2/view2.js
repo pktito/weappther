@@ -10,7 +10,7 @@ angular.module('myApp.view2', ['ngRoute'])
 }]).controller('View2Ctrl', function($scope, $timeout, infoManagerService, $routeParams, mapservice) {
 
     $scope.cityHistory_ = JSON.parse($routeParams.city);
-    $scope.city = $scope.cityHistory_.name;
+
     $scope.cityHistory = mapservice.getHistory($scope.cityHistory_.name);
     $scope.dataHistory = JSON.parse($scope.cityHistory);
 
@@ -21,8 +21,7 @@ angular.module('myApp.view2', ['ngRoute'])
         $scope.labels.push(item.date);
         $scope.data.push(item.temp.temp);
     });
-
-    $scope.series = [$scope.city];
+    $scope.series = [$scope.cityHistory_];
 
     $scope.onClick = function (points, evt) {
         console.log(points, evt);
